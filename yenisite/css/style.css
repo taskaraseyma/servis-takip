@@ -1,0 +1,146 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  margin: 0;
+}
+
+.kart {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  max-width: 700px;
+  width: 100%;
+}
+
+.satir {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.etiket {
+  width: 150px;
+  min-width: 150px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.icerik {
+  flex: 1;
+}
+
+.icerik input,
+.icerik select {
+  padding: 8px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 15px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Sadece telefon tipi input'a özel stil */
+.icerik input[type="tel"] {
+  letter-spacing: 1px;
+}
+
+.icerik input:focus,
+.icerik select:focus {
+  outline: none;
+  border-color: #2196f3;
+  box-shadow: 0 0 5px rgba(33, 150, 243, 0.3);
+}
+
+.butonlar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.butonlar button {
+  padding: 8px 16px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.butonlar button:hover {
+  transform: scale(1.03);
+}
+
+.sil {
+  background-color: #f44336;
+  color: white;
+}
+
+.tasi {
+  background-color: #2196f3;
+  color: white;
+}
+
+.pdf {
+  background-color: #4caf50;
+  color: white;
+}
+
+.resim {
+  background-color: #ff9800;
+  color: white;
+}
+
+/* Mobil uyum */
+@media (max-width: 600px) {
+  .satir {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .etiket {
+    width: 100%;
+    margin-bottom: 4px;
+  }
+
+  .butonlar {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .butonlar button {
+    width: 100%;
+  }
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-icerik {
+  background-color: white;
+  color: #333;
+  padding: 20px 30px;
+  border-radius: 10px;
+  font-size: 18px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
